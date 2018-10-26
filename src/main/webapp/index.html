@@ -12,6 +12,14 @@
     xmlHttp.send( null );
     document.getElementById('output').innerHTML = xmlHttp.responseText;
   }
+
+  function httpDelete(theUrl)
+  {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "DELETE", theUrl, false ); // false for synchronous request
+    xmlHttp.send( null );
+    //document.getElementById('output').innerHTML = xmlHttp.responseText;
+  }
 </script>
 
 <button onclick='httpGet("http://localhost:8082/accountapp/api/account/getAllAccounts")' id="myBtn">Push my button</button>
